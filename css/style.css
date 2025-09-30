@@ -1,0 +1,220 @@
+body {
+  font-family: '微軟正黑體', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9fe;
+  color: #333;
+  line-height: 1.6;
+
+  overflow-x: hidden;
+}
+
+/* ============== 輪播 ============== */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;  /* 螢幕滿版高 */
+  overflow: hidden;
+}
+
+.img-banner {
+  display: flex;
+  height: 100%;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.img-banner img {
+  flex-shrink: 0;   /* ❗不要被壓縮 */
+  width: 100%;      /* 等於 carousel 寬度 */
+  height: 100%;     /* 等於 carousel 高度 */
+  object-fit: cover; /* 不變形，裁切填滿 */
+}
+
+/* 疊在圖片上的 header */
+.carousel-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 60px 20px 20px;
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0));
+}
+.carousel-header h2 {
+  margin: 0;
+  font-size: 36px;
+}
+.carousel-header p {
+  margin: 10px 0 0;
+  font-size: 20px;
+}
+
+/* 左右按鈕 */
+.btn-banner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.btn {
+  background-color: rgba(211, 166, 243, 0.8);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.btn:focus {
+  outline: none;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  color: #ADD8E6;
+}
+
+/* ============== 服務卡片 Flex ============== */
+
+.services {
+  display: flex;
+  justify-content: space-around; /* 平均分配 */
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f4f4f9;
+  padding: 1rem;
+  border-radius: 8px;
+
+  /* 自動平均寬度 */
+  /* flex: 1;  */
+  /* 自動寬度 + 最小寬度 */
+  flex: 1 1 150px; 
+
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ============== 作品展示 Grid ============== */
+
+.gallery {
+  display: grid;
+  
+  /* 三欄等分 */
+  grid-template-columns: repeat(3, 1fr); 
+  
+  /* 兩欄平分 */
+  /* grid-template-columns: repeat(2, 1fr);*/ 
+  
+  /* 不同比例欄位 */
+  /* grid-template-columns: 200px 1fr 2fr;*/ 
+  
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.item {
+  background: #ADD8E6;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+.item a{
+  text-decoration: none;
+}
+.item img {
+  width: 100%;
+  border-radius: 8px;
+}
+.item h2 {
+  font-size: 20px;
+  color: #333;
+}
+.item p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* ============== 社群連結 Flex ============== */
+
+ul {
+  list-style: none;
+  padding: 0;
+
+  /* Flex 排版 */
+  display: flex;
+  justify-content: center;
+  /* justify-content: space-between; → 兩端對齊 */
+  /* justify-content: space-around; → 平均分配 */
+  gap: 1rem; /* 每個項目之間留間距 */
+}
+
+ul li {
+  margin: 0; /* 清掉舊的 margin */
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  background: #ADD8E6;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+ul li a:hover {
+  background: #87ceeb;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #e5e7eb;
+  margin-top: 2rem;
+}
+
+/* ============== 響應式 ============== */
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 平板：兩欄 */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr; /* 手機：單欄 */
+  }
+}

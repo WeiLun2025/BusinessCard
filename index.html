@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>我的個人名片</title>
+
+</head>
+<body>
+  
+  <!-- 頁首 -->
+  <!-- <header>
+    <h1>翁偉倫</h1>
+    <p>
+      前端工程師新手，努力學習中 🚀<br>
+      目前正在練習使用 Vue
+    </p>
+  </header> -->
+  <!-- 輪播 -->
+  <div class="carousel">
+    <div class="img-banner" id="imgs">
+      <img src="./img/arno-unsplash-01.jpg" alt="img01">
+      <img src="./img/corina-unsplash-02.jpg" alt="img02">
+      <img src="./img/sergey-unsplash-03.jpg" alt="img03">
+    </div>
+
+    <div class="carousel-header">
+      <h2>翁偉倫</h2>
+      <p>前端工程師新手，努力學習中 🚀<br>
+      目前正在練習使用 Vue</p>
+    </div>
+
+    <div class="btn-banner">
+      <button id="left" class="btn"> ← </button>
+      <button id="right" class="btn"> → </button>
+    </div>
+  </div>
+
+  <!-- 主要內容 -->
+  <main>
+
+    <section>
+      <h2>關於我</h2>
+      <p>
+        嗨，我是一位剛踏入前端世界的工程師，喜歡把設計稿轉換成漂亮的網頁。<br>
+        這個網頁回顧最使用 HTML、CSS、JavaScript 手刻的感覺。<br>
+        2025年7月從『緯育TibaMe前端工程師養成班』結業，目前在補教機構擔任前端工程師。<br>
+      </p>
+    </section>
+
+    <section>
+      <h2>過去經驗</h2>
+      <p>
+        畢業於慈濟大學東方語文學系日文組。<br>
+        曾從事多項不同類型的工作，累積了在不同產業中的適應能力與跨領域溝通技巧。<br>
+        透過打工度假到日本工作，具備跨文化溝通能力與國際視野。
+      </p>
+    </section>
+    
+    <!-- 服務項目 -->
+    <section>
+      <h2>我能幫你做的事</h2>
+        <div class="services">
+          <div class="card">💻 前端切版</div>
+          <div class="card">😊 Figma</div>
+          <div class="card">🎨 動態網頁</div>
+          <div class="card">🚀 部署網站</div>
+        </div>
+    </section>
+
+    <!-- 社群連結 -->
+    <section>
+      <h2>社群連結</h2>
+      <ul>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="www.linkedin.com/in/owen2025">LinkedIn</a></li>
+        <li><a href="https://pda.104.com.tw/profile/share/eVgMF8uDhgHjjLs1ssHbtZO1LHdCRdbI">104 Bank</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>我的作品展示</h2>
+      <div class="gallery">
+        <div class="item">
+          <a href="https://tibamef2e.com/tjd101/g2/">
+            <img src="https://picsum.photos/200?random=1" alt="">
+            <h2>團隊專題</h2>
+          </a>
+          <p>在前端工程師養成班時的團隊作品<br>
+          我負責綠界金流串接、上傳到Google雲端硬碟</p>
+        </div>
+        <div class="item">
+          <a href="#">
+            <img src="https://picsum.photos/200?random=2" alt="">
+            <h2>待辦清單(練習版)</h2>
+          </a>
+          <p>透過 ChatGPT 制定練習方案</p>
+        </div>
+
+        <div class="item">
+          <a href="#">
+            <img src="https://picsum.photos/200?random=3" alt="">
+            <h2>待辦清單(實用版)</h2>
+          </a>
+          <p>改善上一個版本的侷限性，並且控制介面優化</p>
+        </div>
+
+        <div class="item">
+          <a href="https://weilun2025.github.io/2048-FromCursor-/ ">
+            <img src="https://picsum.photos/200?random=4" alt="">
+            <h2>小遊戲 - 2048</h2>
+          </a>
+          <p>使用 AI 工具</p>
+        </div>
+
+        <div class="item">
+          <a href="https://weilun2025.github.io/SnakeGame-FromGeminiCLI-/ ">
+            <img src="https://picsum.photos/200?random=5" alt="">
+            <h2>小遊戲 - 貪食蛇</h2>
+          </a>
+          <p>使用 AI 工具</p>
+        </div>
+
+        <div class="item">
+          <a href="#">
+            <img src="https://picsum.photos/200?random=6" alt="">
+            <h2></h2>
+          </a>
+          <p></p>
+        </div>
+
+        <div class="item">
+          <a href="#">
+            <img src="https://picsum.photos/200?random=7" alt="">
+            <h2></h2>
+          </a>
+          <p></p>
+        </div>
+
+        <div class="item">
+          <a href="#">
+            <img src="https://picsum.photos/200?random=8" alt="">
+            <h2></h2>
+          </a>
+          <p></p>
+        </div>
+
+        <div class="item">
+          <a href="#">
+            <img src="https://picsum.photos/200?random=9" alt="">
+            <h2></h2>
+          </a>
+          <p></p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 互動練習 -->
+    <section>
+      <h2>互動練習一</h2>
+      <button id="greetBtn">打招呼</button>
+      <p id="message"></p>
+    </section>
+
+    <section>
+      <h2>互動練習二</h2>
+      <button id="learningBtn">顯示學習訊息</button>
+      <p id="learningMessage"></p>
+    </section>
+
+  </main>
+
+  <!-- 頁尾 -->
+  <footer>
+    <p>© 2025 Owen. All rights reserved.</p>
+  </footer>
+</body>
+<script src="/js/start.js"></script>
+</html>
