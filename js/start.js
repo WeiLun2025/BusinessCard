@@ -97,3 +97,20 @@ leftBtn.addEventListener('click', () => {
 
 /* 視窗縮放時，保持圖片正確對齊 */
 window.addEventListener('resize', changeImage)
+
+
+
+const tabs = document.querySelectorAll('.license-tabs .tab');
+const panels = document.querySelectorAll('.license-panel');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // 移除所有 active
+    tabs.forEach(t => t.classList.remove('active'));
+    panels.forEach(p => p.classList.remove('active'));
+
+    // 加上目前點選的 active
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.target).classList.add('active');
+  });
+});

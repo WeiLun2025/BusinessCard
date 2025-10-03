@@ -5,7 +5,7 @@ body {
   background-color: #f9f9fe;
   color: #333;
   line-height: 1.6;
-
+  box-sizing: border-box;
   overflow-x: hidden;
 }
 
@@ -197,6 +197,89 @@ ul li a {
 ul li a:hover {
   background: #87ceeb;
 }
+
+/* ============== 證照 ============== */
+
+.licenses {
+  padding: 40px 20px;
+}
+
+.licenses h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* Tabs */
+.license-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.license-tabs .tab {
+  padding: 10px 18px;
+  border: none;
+  background: #eee;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.license-tabs .tab:hover {
+  background: #ddd;
+}
+
+.license-tabs .tab.active {
+  background: #333;
+  color: #fff;
+}
+
+/* Panels */
+.license-panel {
+  display: none;
+}
+
+.license-panel.active {
+  display: block;
+}
+
+/* 卡片排列 */
+.license-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.license-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.license-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.license-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.license-card p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+
 
 footer {
   text-align: center;
